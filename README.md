@@ -9,5 +9,7 @@ Nos dirá también la asignatura actual en la que se encuentra el alumno.
 
 # Herramientas
 * API de telegram.
+* Lenguaje usado: Python
 * Servidor de base de datos.
-* Servidor en la nube.
+* Desliegue en la nube: Microsoft Azure
+* Test de integración continua: Travis CI
