@@ -1,0 +1,12 @@
+branches:
+  only:
+  - master
+language: python
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+script:
+  - pytest
+  - python HitosIV_test.py
+  - nosetests
