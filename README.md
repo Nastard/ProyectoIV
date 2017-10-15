@@ -16,7 +16,7 @@ Hemos usado lenguaje Python y la API de Telegram. Se tendrá en cuenta para el d
 Usaremos un sistemas de test y de integración continua, que se detalla más adelante.   
 Como todavía no disponemos de una BBDD, usamos el archivo *horario.json* para realizar los tests.  
 
-# Sistema de test y Integración continua
+# Sistema de test e Integración continua
 Hemos usado el sistema de test de Python, `unittest`, y TravisCI para la integración continua, encargado de ejecutar estos test. Cuando se modifique el código del repositorio, se comprueba que el codigo generado sigue funcionando de manera correcta, verificando su integración.  
 El archivo `QueToca_test.py`, dentro de la carpeta *botQueToca*, tiene desarrollados los test unitarios de las funciones de la biblioteca del bot.
 
