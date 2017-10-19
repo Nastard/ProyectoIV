@@ -96,15 +96,15 @@ class QueToca:
 				horario_a_borrar = json.load(datos)
 		except IOError as fallo:
 			print("Error %d leyendo horario.json: %s", fallo.errno, fallo.strerror)
-
-		# horario_a_borrar["curso"] = "null"
-		# horario_a_borrar["grupo"] = "null"
-		# horario_a_borrar["asignatura"] = "null"
-		# horario_a_borrar["hora_inicio"] = "null"
-		# horario_a_borrar["hora_fin"] = "null"
-		# horario_a_borrar["fecha"] = "null"
-		# horario_a_borrar["aula"] = "null"
-		# horario_a_borrar["profesor"] = "null"
+		# Implementado borrar
+		horario_a_borrar["curso"] = "null"
+		horario_a_borrar["grupo"] = "null"
+		horario_a_borrar["asignatura"] = "null"
+		horario_a_borrar["hora_inicio"] = "null"
+		horario_a_borrar["hora_fin"] = "null"
+		horario_a_borrar["fecha"] = "null"
+		horario_a_borrar["aula"] = "null"
+		horario_a_borrar["profesor"] = "null"
 
 		try:
 			with open('./horario.json', 'w') as borrado:
