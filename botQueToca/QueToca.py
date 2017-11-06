@@ -143,6 +143,10 @@ def send_activity(message):
 	cur.close()
 	bot.send_message(cid, str(row))
 
+@bot.message_handler(commands=['viñeda'])
+def send_welcome(message):
+    bot.reply_to(message, 'Dime illo dime')
+
 # Handle all other messages with content_type 'text' (content_types defaults to ['text'])
 @bot.message_handler(func=lambda message: True)
 def echo_message(message):
