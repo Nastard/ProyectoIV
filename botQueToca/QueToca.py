@@ -122,7 +122,11 @@ import os
 
 API_TOKEN = os.environ["TOKEN"]
 bot = telebot.TeleBot(API_TOKEN)
-conn = psycopg2.connect(database='d7rt72k2bhk1if', user='idcafjppentyue', password='b134f0d4337e2edfce62ea46a5ff919ea55ce7dcc77a604be3aa57de1f3bbefa', host='ec2-174-129-253-133.compute-1.amazonaws.com')
+database = os.environ["DATABASE"]
+user = os.environ["USER"]
+password = os.environ["PASSWD"]
+host = os.environ["HOST"]
+conn = psycopg2.connect(database=database, user=user, password=password, host=host)
 
 # Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
