@@ -18,7 +18,7 @@ class TestQueToca(unittest.TestCase):
         self.assertTrue(self.horario.CrearHorario(), "Se ha creado un nuevo horario.")
 
     def test_leer_horario(self):
-        self.assertIsInstance(self.horario.LeerHorario(), str, "Se ha leido el horario.")
+        self.assertIsInstance(self.horario.LeerHorario(4,'A'), str, "Se ha leido el horario.")
 
     def test_modificar_horario(self):
         self.assertTrue(self.horario.ModificarHorario(), "Se ha modificado el horario.")
