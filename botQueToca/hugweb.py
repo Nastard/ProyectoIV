@@ -16,4 +16,4 @@ def actividades_bd():
 @hug.get('/unhorario/{id}')
 def one ( id: int ):
 	info = horario.LeerHorario(id)
-	return { "Horario": info }
+	return { "Horario": info 
