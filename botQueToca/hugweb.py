@@ -8,7 +8,7 @@ def status():
 	"""Devuelve estado"""
 	return { "status": "OK" }
 
-# @hug.get('/horario')
-# def actividades_bd():
-# 	info = horario.LeerHorario(1)
-# 	return { "Horario": info }
+@hug.get('/horario')
+def actividades_bd():
+	info = horario.LeerHorario(4)
+	return { "Horario": info }

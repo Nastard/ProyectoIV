@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import telebot
-#import psycopg2
 import os
 from QueTocaBBDD import Horario
 
