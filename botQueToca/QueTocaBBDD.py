@@ -11,13 +11,13 @@ class Horario:
 		self.user = os.environ["USER"]
 		self.password = os.environ["PASSWD"]
 		self.host = os.environ["HOST"]
-        
+
 		try:
 			with open('./horario.json') as datos:
 				self.horario = json.load(datos)
 		except IOError as fallo:
 			print("Error %d leyendo horario.json: %s", fallo.errno, fallo.strerror)
-	
+
 	def ConexionABaseDatos(self):
 		conexion = psycopg2.connect(database=self.basedatos, user=self.user, password=self.password, host=self.host)
 		return conexion
@@ -43,8 +43,8 @@ class Horario:
 				return True
 		except IOError as fallo:
 			print("Error %d escribiendo nuevo_horario.json: %s", fallo.errno, fallo.strerror)
-	
-	def LeerHorario(curso=None, grupo=None):
+
+	def LeerHorario(self, curso=None, grupo=None):
 		conn = self.ConexionABaseDatos()
 		cur = conn.cursor()
 		cur.execute("SELECT * FROM horario WHERE curso="+str(curso)+" AND grupo="+str(grupo))
