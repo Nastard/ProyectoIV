@@ -1,5 +1,5 @@
 import hug
-from botQueToca.QueTocaBBDD import Horario
+from QueTocaBBDD import Horario
 
 horario=Horario()
 
