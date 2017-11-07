@@ -9,7 +9,7 @@ class Horario:
 	def __init__(self):
 		self.basedatos = os.environ["DATABASE"]
 		self.user = os.environ["USER"]
-		self.password = os.environ["PASSWD"]
+		self.password = os.environ["PASSWD"
 		self.host = os.environ["HOST"]
 
 		try:

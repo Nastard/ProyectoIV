@@ -10,7 +10,7 @@ bot = telebot.TeleBot(API_TOKEN)
 
 # Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
-def send_welcome(message):
+def send_welcome(message)
     bot.reply_to(message, 'Hola, soy un bot que te dice tu horario.')
 
 @bot.message_handler(commands=['horario'])
