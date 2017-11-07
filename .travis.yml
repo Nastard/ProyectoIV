@@ -8,4 +8,4 @@ python:
   - "3.5"
 
 script:
-  - make test
+  - make tes
