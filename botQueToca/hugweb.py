@@ -12,3 +12,8 @@ def status():
 def actividades_bd():
 	info = horario.LeerHorario(4)
 	return { "Horario": info }
+
+@hug.get('/unhorario/{id}')
+def one ( id: int ):
+	info = horario.LeerHorario(4)
+	return { "Horario": info }
