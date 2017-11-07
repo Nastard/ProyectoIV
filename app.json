@@ -1,0 +1,8 @@
+{
+   "name": "Bot de Telegram QueToca",
+   "description": "Bot de Telegram que nos dice el horari ode clase",
+   "repository": "https://github.com/Anixo/ProyectoIV",
+   "logo": "https://www.safarimadrid.com/images/horario2.jpg",
+   "keywords": ["python", "telegram"],
+   "addons": [ "heroku-postgresql" ]
+}
