@@ -7,21 +7,20 @@ class Horario:
 	"""Clase que gestiona las horas de clase"""
 
 	def __init__(self):
-        self.database = os.environ["DATABASE"]
-        self.user = os.environ["USER"]
-        self.password = os.environ["PASSWD"]
-        self.host = os.environ["HOST"]
+		self.basedatos = os.environ["DATABASE"]
+		self.user = os.environ["USER"]
+		self.password = os.environ["PASSWD"]
+		self.host = os.environ["HOST"]
         
 		try:
 			with open('./horario.json') as datos:
 				self.horario = json.load(datos)
 		except IOError as fallo:
 			print("Error %d leyendo horario.json: %s", fallo.errno, fallo.strerror)
-
-    def ConexionABaseDatos(self):
-        conexion = psycopg2.connect(database=self.database, user=self.user, password=self.password, host=self.host)
-        return conexion
-
+	
+	def ConexionABaseDatos(self):
+		conexion = psycopg2.connect(database=self.basedatos, user=self.user, password=self.password, host=self.host)
+		return conexion
 
 	def CrearHorario(curso=None, grupo=None, asignatura=None, hora_inicio=None, hora_fin=None, fecha=None, aula=None, profesor=None):
 		curso = 4
@@ -44,16 +43,15 @@ class Horario:
 				return True
 		except IOError as fallo:
 			print("Error %d escribiendo nuevo_horario.json: %s", fallo.errno, fallo.strerror)
-
-
+	
 	def LeerHorario(curso=None, grupo=None):
-        conn = self.ConexionABaseDatos()
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM horario WHERE curso="+str(curso)+" AND grupo="+str(grupo))
-        info = cur.fetchall()
-        conn.close()
-        cur.close()
-        return str(info)
+		conn = self.ConexionABaseDatos()
+		cur = conn.cursor()
+		cur.execute("SELECT * FROM horario WHERE curso="+str(curso)+" AND grupo="+str(grupo))
+		info = cur.fetchall()
+		conn.close()
+		cur.close()
+		return str(info)
 
 	def ModificarHorario(nuevo_curso=None, nuevo_grupo=None, nueva_asignatura=None,
 						 nueva_hora_inicio=None, nueva_hora_fin=None, nueva_fecha=None, nuevo_aula=None, nuevo_profesor=None):
