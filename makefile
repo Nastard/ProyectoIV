@@ -1,3 +1,3 @@
 test:
-	pytest
-	nosetests
+	cd ./botQueToca/ && pytest
+	cd ./botQueToca/ && nosetests
