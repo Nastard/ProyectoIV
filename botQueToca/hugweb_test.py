@@ -11,7 +11,7 @@ def test_ruta_correcta():
     assert datos.status == "200 OK"
     assert datos.data['Horario'] == "[(4, 'A', 'Infraestructura virtual', datetime.date(2016, 11, 6), -1.2, datetime.time(9, 30), datetime.time(11, 30), 'JJ')]"
 
-def test_ruta_un_elemento()
+def test_ruta_un_elemento():
     datos = hug.test.get(hugweb, '/unhorario/4')
     assert datos.status == "200 OK"
     assert datos.data['Horario'] == "[(4, 'A', 'Infraestructura virtual', datetime.date(2016, 11, 6), -1.2, datetime.time(9, 30), datetime.time(11, 30), 'JJ')]"

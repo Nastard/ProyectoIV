@@ -27,4 +27,4 @@ class TestQueToca(unittest.TestCase):
         self.assertTrue(self.horario.BorrarHorario(), "Se ha borrado el horario.")
 
 if __name__ == '__main__':
-    unittest.main(
+    unittest.main()
