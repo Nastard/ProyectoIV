@@ -1,5 +1,5 @@
 # ProyectoIV, Bot de Telegram QueToca
-[![Build Status](https://travis-ci.org/Anixo/ProyectoIV.svg?branch=master)](https://travis-ci.org/Anixo/ProyectoIV)
+[![Build Status](https://travis-ci.org/Anixo/ProyectoIV.svg?branch=master)](https://travis-ci.org/Anixo/ProyectoIV) [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Anixo/ProyectoIV)
 >Proyecto a desarrollar de la asignatura Infraestructura Virtual.  
 Se puede consultar en [este enlace](https://anixo.github.io/ProyectoIV/).
