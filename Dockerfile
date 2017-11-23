@@ -10,6 +10,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /usr/src/app
 
-EXPOSE 8000
-
-CMD cd ./botQueToca && gunicorn hugweb:__hug_wsgi__
+EXPOSE 80
+CMD [ "hug",  "-p 80", "-f","./botQueToca/hugweb.py" ]
