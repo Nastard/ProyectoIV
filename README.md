@@ -67,3 +67,36 @@ También se puede visitar las rutas siguientes:
 La funcionalidad del bot se puede hacer diciéndole el comando `/horario`. El bot se llama @QueTocaBot.
 
 Despliegue https://iv-anixo.herokuapp.com/
+
+# Desarrollo en Docker
+Instalamos Docker usando su [guía oficial](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository).  
+Si ejecutamos el siguiente comando crearemos la imagen de la aplicación:
+~~~
+$ sudo docker pull anixo/proyectoiv
+~~~
+Y si ejecutamos el siguiente comando entraremos dentro del contenedor:
+~~~
+$ sudo docker run -it anixo/proyectoiv /bin/bash
+~~~
+Para ver que devuelve un `status: OK` basta con ejecutar:
+~~~
+$ hug -p 80 -f ./botQueToca/hugweb.py &
+$ curl localhost:80/status
+~~~
+
+# Docker Hub
+Hemos creado una cuenta en Docker Hub y la hemos linkeado con GitHub para que coja el repositorio del Proyecto. Esta actualizado de forma automática con el repositorio:  
+![imagen](https://github.com/Anixo/ProyectoIV/blob/master/img/dockerhub.png)  
+URL de Docker Hub: https://hub.docker.com/r/anixo/proyectoiv/
+
+# Desarrollo en Zeit
+Contenedor: https://proyectoiv-frymrirpfw.now.sh/  
+
+Debemos instalar **npm** y luego ejecutar el siguiente comando para instalar now:  
+~~~
+$ npm install -g now
+~~~
+Tras ello, si ejecutamos el siguiente comando se despliega automáticamente y nos genera un enlace como el de arriba (Puede que la primera vez nos pida un login, en el cual solo hay que darse de alta):  
+~~~
+$ now --public
+~~~
