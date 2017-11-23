@@ -1,8 +1,13 @@
 import hug
 import hugweb
 
-def test_estado_OK():
+def test_index_OK():
     datos = hug.test.get(hugweb, '/')
+    assert datos.status == "200 OK"
+    assert datos.data['status']=="OK"
+
+def test_estado_OK():
+    datos = hug.test.get(hugweb, '/status')
     assert datos.status == "200 OK"
     assert datos.data['status']=="OK"
 

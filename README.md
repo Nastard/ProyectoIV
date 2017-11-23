@@ -25,7 +25,7 @@ Debemos instalar:
 ~~~
 $ sudo apt-get install python  
 $ sudo apt-get install python-pip  
-$ sudo pip install -r requirements.txt
+$ pip install -r requirements.txt
 ~~~
 
 # Desarrollo del PaaS
