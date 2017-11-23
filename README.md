@@ -53,7 +53,7 @@ $ heroku ps:scale worker=1 web=1
 ~~~
 
 Se ha configurado Heroku para que cada vez que se realice un push en el repositorio, Heroku lo tiene en cuenta y se despliega automáticamente despúes de pasar los test de integración continua:
-![imagen](https://github.com/Anixo/ProyectoIV/blob/master/img/heroku.png)  
+![imagen](https://lh6.googleusercontent.com/fUaETSohT1kq7rLvVnu4eroFP75fexSbEh_dpppIDY2c8V1o4OB4f3J54aMfY7ayu_pWQpRGr6ruDT_kFyNT=w1920-h912)  
 
 Podemos probar que el servicio web funciona ejecutando  
 ~~~
@@ -86,7 +86,7 @@ $ curl localhost:80/status
 
 # Docker Hub
 Hemos creado una cuenta en Docker Hub y la hemos linkeado con GitHub para que coja el repositorio del Proyecto. Esta actualizado de forma automática con el repositorio:  
-![imagen](https://github.com/Anixo/ProyectoIV/blob/master/img/dockerhub.png)  
+![imagen](https://lh4.googleusercontent.com/Yg22-w0rb05n9B7t5FAxwgKa9WGXziy7EPIrfCAaFi0WBgrhm3hX7VmVOKOBG4IyA5lHtQPBirRuBA=w1920-h912)  
 URL de Docker Hub: https://hub.docker.com/r/anixo/proyectoiv/
 
 # Desarrollo en Zeit
