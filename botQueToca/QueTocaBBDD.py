@@ -98,7 +98,6 @@ class Horario:
 		except IOError as fallo:
 			print("Error %d escribiendo horario.json: %s", fallo.errno, fallo.strerror)
 
-
 	def BorrarHorario(curso=None, grupo=None, asignatura=None):
 		try:
 			with open('./horario.json') as datos:
@@ -121,3 +120,30 @@ class Horario:
 				return True
 		except IOError as fallo:
 			print("Error %d escribiendo horario.json: %s", fallo.errno, fallo.strerror)
+
+	def ProfesorAsignatura(asignatura=None):
+		conn = self.ConexionABaseDatos()
+		cur = conn.cursor()
+		cur.execute("SELECT profesor FROM horario WHERE asignatura=\'"+str(asignatura)+"\'")
+		info = cur.fetchall()
+		conn.close()
+		cur.close()
+		return str(info)
+
+	def MisAsignaturas(self):
+		conn = self.ConexionABaseDatos()
+		cur = conn.cursor()
+		cur.execute("SELECT asignatura FROM horario")
+		info = cur.fetchall()
+		conn.close()
+		cur.close()
+		return str(info)
+
+	def MiDia(self, fecha=None):
+		conn = self.ConexionABaseDatos()
+		cur = conn.cursor()
+		cur.execute("SELECT * FROM horario WHERE fecha=\'"+str(fecha)+"\'")
+		info = cur.fetchall()
+		conn.close()
+		cur.close()
+		return str(info)
