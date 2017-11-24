@@ -121,7 +121,7 @@ class Horario:
 		except IOError as fallo:
 			print("Error %d escribiendo horario.json: %s", fallo.errno, fallo.strerror)
 
-	def ProfesorAsignatura(asignatura=None):
+	def ProfesorAsignatura(self, asignatura=None):
 		conn = self.ConexionABaseDatos()
 		cur = conn.cursor()
 		cur.execute("SELECT profesor FROM horario WHERE asignatura=\'"+str(asignatura)+"\'")
