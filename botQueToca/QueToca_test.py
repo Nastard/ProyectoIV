@@ -26,5 +26,15 @@ class TestQueToca(unittest.TestCase):
     def test_borrar_horario(self):
         self.assertTrue(self.horario.BorrarHorario(), "Se ha borrado el horario.")
 
+    def test_profesor_asignatura(self):
+        self.assertIsInstance(self.horario.ProfesorAsignatura("Infraestructura virtual"), str, "Se ha leido un profesor.")
+
+    def test_mis_asignaturas(self):
+    	self.assertIsInstance(self.horario.MisAsignaturas(), str, "Se ha leido mis asignaturas.")
+
+    def test_mi_dia(self):
+    	self.assertIsInstance(self.horario.MiDia("2016-11-06"), str, "Se ha leido mi dia.")
+
+
 if __name__ == '__main__':
     unittest.main()
