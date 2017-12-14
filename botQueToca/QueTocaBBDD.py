@@ -45,10 +45,10 @@ class Horario:
 		except IOError as fallo:
 			print("Error %d escribiendo nuevo_horario.json: %s", fallo.errno, fallo.strerror)
 
-	def LeerHorario(self, curso=None, grupo=None):
+	def LeerHorario(self, id=None):
 		conn = self.ConexionABaseDatos()
 		cur = conn.cursor()
-		cur.execute("SELECT * FROM horario WHERE curso="+str(curso))
+		cur.execute("SELECT * FROM horario WHERE id="+str(id))
 		info = cur.fetchall()
 		conn.close()
 		cur.close()
