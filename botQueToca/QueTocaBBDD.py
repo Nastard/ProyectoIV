@@ -28,13 +28,14 @@ class Horario:
 			raise IndexError("Error en el numero de curso.")
 
 		datos = {
+			"id": "D5",
 			"curso": curso,
-			"grupo": "A",
+			"grupo": "C",
 			"asignatura": "Infraestructura Virtual",
-			"hora_inicio": "9:30",
+			"dia_semana": "Jueves",
+			"aula": "-1.2",
+			"hora_inicio": "09:30",
 			"hora_fin": "10:30",
-			"fecha": "05/10/2017",
-			"aula": "1.2",
 			"profesor": "JJ"
 		}
 		try:
@@ -53,13 +54,17 @@ class Horario:
 		cur.close()
 		return str(info)
 
-	def ModificarHorario(nuevo_curso=None, nuevo_grupo=None, nueva_asignatura=None,
-						 nueva_hora_inicio=None, nueva_hora_fin=None, nueva_fecha=None, nuevo_aula=None, nuevo_profesor=None):
+	def ModificarHorario(nuevo_id=None, nuevo_curso=None, nuevo_grupo=None, nueva_asignatura=None,
+						 nueva_hora_inicio=None, nueva_hora_fin=None, nuevo_dia_semana=None, nuevo_aula=None, nuevo_profesor=None):
 		try:
 			with open('./horario.json') as datos:
 				horario_modificado = json.load(datos)
 		except IOError as fallo:
 			print("Error %d leyendo horario.json: %s", fallo.errno, fallo.strerror)
+
+		nuevo_id = "D32"
+		if nuevo_id != None:
+			horario_modificado["hora_inicio"] = nuevo_id
 
 		nuevo_curso = 3
 		if nuevo_curso == None or nuevo_curso > 5 or nuevo_curso < 0:
@@ -82,8 +87,8 @@ class Horario:
 		if nueva_hora_fin != None:
 			horario_modificado["hora_fin"] = nueva_hora_fin
 
-		if nueva_fecha != None:
-			horario_modificado["fecha"] = nueva_fecha
+		if nuevo_dia_semana != None:
+			horario_modificado["dia_semana"] = nuevo_dia_semana
 
 		if nuevo_aula != None:
 			horario_modificado["aula"] = nuevo_aula
@@ -105,12 +110,13 @@ class Horario:
 		except IOError as fallo:
 			print("Error %d leyendo horario.json: %s", fallo.errno, fallo.strerror)
 		# Implementado borrar
+		horario_a_borrar["id"] = "null"
 		horario_a_borrar["curso"] = "null"
 		horario_a_borrar["grupo"] = "null"
 		horario_a_borrar["asignatura"] = "null"
 		horario_a_borrar["hora_inicio"] = "null"
 		horario_a_borrar["hora_fin"] = "null"
-		horario_a_borrar["fecha"] = "null"
+		horario_a_borrar["dia_semana"] = "null"
 		horario_a_borrar["aula"] = "null"
 		horario_a_borrar["profesor"] = "null"
 
@@ -139,10 +145,10 @@ class Horario:
 		cur.close()
 		return str(info)
 
-	def MiDia(self, fecha=None):
+	def MiDia(self, dia=None):
 		conn = self.ConexionABaseDatos()
 		cur = conn.cursor()
-		cur.execute("SELECT * FROM horario WHERE fecha=\'"+str(fecha)+"\'")
+		cur.execute("SELECT * FROM horario WHERE dia_semana=\'"+str(dia)+"\'")
 		info = cur.fetchall()
 		conn.close()
 		cur.close()

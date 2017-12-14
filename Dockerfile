@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /usr/src/app
 
 EXPOSE 80
-CMD [ "hug",  "-p 80", "-f","./botQueToca/hugweb.py" ]
+CMD [ "hug", "-p 80", "-f", "./botQueToca/hugweb.py" ]

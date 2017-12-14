@@ -18,7 +18,7 @@ class TestQueToca(unittest.TestCase):
         self.assertTrue(self.horario.CrearHorario(), "Se ha creado un nuevo horario.")
 
     def test_leer_horario(self):
-        self.assertIsInstance(self.horario.LeerHorario(4), str, "Se ha leido el horario.")
+        self.assertIsInstance(self.horario.LeerHorario("D1"), str, "Se ha leido el horario.")
 
     def test_modificar_horario(self):
         self.assertTrue(self.horario.ModificarHorario(), "Se ha modificado el horario.")
@@ -33,7 +33,7 @@ class TestQueToca(unittest.TestCase):
     	self.assertIsInstance(self.horario.MisAsignaturas(), str, "Se ha leido mis asignaturas.")
 
     def test_mi_dia(self):
-    	self.assertIsInstance(self.horario.MiDia("2016-11-06"), str, "Se ha leido mi dia.")
+    	self.assertIsInstance(self.horario.MiDia("Jueves"), str, "Se ha leido mi dia.")
 
 
 if __name__ == '__main__':

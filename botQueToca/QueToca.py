@@ -9,9 +9,13 @@ API_TOKEN = os.environ["TOKEN"]
 bot = telebot.TeleBot(API_TOKEN)
 
 # Handle '/start' and '/help'
-@bot.message_handler(commands=['help', 'start'])
+@bot.message_handler(commands=['start'])
 def send_welcome(message):
     bot.reply_to(message, 'Hola, soy un bot que te dice tu horario.')
+
+@bot.message_handler(commands=['help'])
+def send_welcome(message):
+    bot.reply_to(message, 'Comandos disponibles:')
 
 @bot.message_handler(commands=['horario'])
 def send_activity(message):

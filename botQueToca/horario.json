@@ -1,8 +1,9 @@
 {
+	"id": "D5",
    "curso": 4,
    "grupo": "C",
    "asignatura": "Infraestructura Virtual",
-   "fecha": "05/10/2017",
+   "dia_semana": "Jueves",
    "aula": "-1.2",
    "hora_inicio": "09:30",
    "hora_fin": "10:30",
