@@ -49,7 +49,6 @@ class Horario:
 		conn = self.ConexionABaseDatos()
 		cur = conn.cursor()
 		cur.execute("SELECT * FROM horario WHERE id=\'"+str(identificador)+"\'")
-		cur.execute("SELECT profesor FROM horario WHERE asignatura=\'"+str(asignatura)+"\'")
 		info = cur.fetchall()
 		conn.close()
 		cur.close()
