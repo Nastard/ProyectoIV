@@ -48,7 +48,7 @@ class Horario:
 	def LeerHorario(self, id=None):
 		conn = self.ConexionABaseDatos()
 		cur = conn.cursor()
-		cur.execute("SELECT * FROM horario WHERE id="+str(id))
+		cur.execute("SELECT * FROM horario WHERE id=\'"+str(id)+"\'")
 		info = cur.fetchall()
 		conn.close()
 		cur.close()
