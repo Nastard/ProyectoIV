@@ -21,7 +21,7 @@ def send_welcome(message):
 def send_activity(message):
 	cid = message.chat.id
 	horario = Horario()
-	info = horario.LeerHorario(4)
+	info = horario.LeerHorario("D1")
 	bot.send_message(cid, info)
 
 # Handle all other messages with content_type 'text' (content_types defaults to ['text'])
