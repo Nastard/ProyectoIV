@@ -99,3 +99,49 @@ Tras ello, si ejecutamos el siguiente comando se despliega automáticamente y no
 ~~~
 $ now --public
 ~~~
+
+# Desarrollo en Azure
+Para el despliegue de la aplicacion en Azure, debemos instalar los siguientes paquetes básicos:  
+~~~
+$ sudo apt-get update && sudo apt-get install -y python libssl-dev libffi-dev python-dev build-essential
+~~~
+Instalamos el CLI de Azure:  
+~~~
+$ curl -L https://aka.ms/InstallAzureCli | bash
+~~~
+Y reiniciamos la terminal:  
+~~~
+$ exec -l $SHELL
+~~~
+
+Nos logueamos con:  
+~~~
+$ az login
+~~~
+Y obtenemos el ID de cliente, el secreto del cliente y el Tenant ID con el comando:  
+~~~
+$ az ad sp create-for-rbac
+~~~
+Y la subscripcion con:  
+~~~
+$ az account list --query "[?isDefault].id" -o tsv
+~~~
+Estos 4 datos serán necesarios exportarlos como variables de entorno para el archivo Vagrantfile.  
+Instalamos el plugin de Azure para Vagrant:  
+~~~
+$ vagrant plugin install vagrant-azure
+$ npm install azure-cli -g
+~~~
+Y añadimos el box a Vagrant:  
+~~~
+$ vagrant box add azure https://github.com/azure/vagrant-azure/raw/v2.0/dummy.box --provider azure
+~~~
+Ya podemos crear el archivo Vagrantfile, tal y como está en el repositorio.  
+~~~
+$ vagrant init azure
+~~~
+
+Ahora crearemos el archivo de aprovisionamiento, donde indicaremos todos
+
+
+Despliegue final: maquinaquetoca.westeurope.cloudapp.azure.com
