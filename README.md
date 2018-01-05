@@ -86,7 +86,7 @@ $ curl localhost:80/status
 
 # Docker Hub
 Hemos creado una cuenta en Docker Hub y la hemos linkeado con GitHub para que coja el repositorio del Proyecto. Esta actualizado de forma automática con el repositorio:  
-![imagen](https://lh4.googleusercontent.com/Yg22-w0rb05n9B7t5FAxwgKa9WGXziy7EPIrfCAaFi0WBgrhm3hX7VmVOKOBG4IyA5lHtQPBirRuBA=w1920-h912)  
+![imagen](https://github.com/Anixo/EjerciciosIV/blob/master/Imagenes/dockerhub.png)  
 URL de Docker Hub: https://hub.docker.com/r/anixo/proyectoiv/
 
 # Desarrollo en Zeit
