@@ -141,7 +141,18 @@ Ya podemos crear el archivo Vagrantfile, tal y como está en el repositorio.
 $ vagrant init azure
 ~~~
 
-Ahora crearemos el archivo de aprovisionamiento, donde indicaremos todos
+Ahora crearemos el archivo de aprovisionamiento, donde indicaremos todos lo necesario para nuestra app, tal y como se muestra [aqui](https://github.com/Anixo/ProyectoIV/blob/master/provision/playbook.yml).  
+Tambíen añadimos un archivo de configuracion, tal y como se muestra [aqui](https://github.com/Anixo/ProyectoIV/blob/master/ansible.cfg).  
 
+Ya podemos iniciar nuestra maquina virtual:  
+~~~
+$ vagrant up --provider=azure
+~~~
+
+Para instalar la aplicacion usaremos un archivo Fabric, como este de [aqui](https://github.com/Anixo/ProyectoIV/blob/master/despliegue/fabfile.py).  
+Con este archivo se puede ejecutar tres acciones:
+* Instalar: se instala supervisor, necesario para mantener el proceso en segundo plano, se clona el repositorio, se copia el archivo de configuracion que usa supervisor, como este de [aqui](https://github.com/Anixo/ProyectoIV/blob/master/hugwebconfig.conf), y se instalan los requirements.  
+* Desinstalar: borra todo el repositorio.
+* Iniciar: lanza supervisor y ejecuta la aplicacion en segundo plano.
 
 Despliegue final: maquinaquetoca.westeurope.cloudapp.azure.com
