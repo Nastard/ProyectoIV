@@ -62,7 +62,6 @@ $ heroku open
 y viendo que devuelve `status: OK`  
 También se puede visitar las rutas siguientes:
 * https://iv-anixo.herokuapp.com/horario
-* https://iv-anixo.herokuapp.com/unhorario/4  
 
 La funcionalidad del bot se puede hacer diciéndole el comando `/horario`. El bot se llama @QueTocaBot.
 
