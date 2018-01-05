@@ -53,7 +53,7 @@ $ heroku ps:scale worker=1 web=1
 ~~~
 
 Se ha configurado Heroku para que cada vez que se realice un push en el repositorio, Heroku lo tiene en cuenta y se despliega automáticamente despúes de pasar los test de integración continua:
-![imagen](https://lh6.googleusercontent.com/fUaETSohT1kq7rLvVnu4eroFP75fexSbEh_dpppIDY2c8V1o4OB4f3J54aMfY7ayu_pWQpRGr6ruDT_kFyNT=w1920-h912)  
+![imagen](https://github.com/Anixo/EjerciciosIV/blob/master/Imagenes/heroku.png)  
 
 Podemos probar que el servicio web funciona ejecutando  
 ~~~
