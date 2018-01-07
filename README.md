@@ -151,8 +151,14 @@ $ vagrant up --provider=azure
 
 Para instalar la aplicacion usaremos un archivo Fabric, como este de [aqui](https://github.com/Anixo/ProyectoIV/blob/master/despliegue/fabfile.py).  
 Con este archivo se puede ejecutar tres acciones:
-* Instalar: se instala supervisor, necesario para mantener el proceso en segundo plano, se clona el repositorio, se copia el archivo de configuracion que usa supervisor, como este de [aqui](https://github.com/Anixo/ProyectoIV/blob/master/hugwebconfig.conf), y se instalan los requirements.  
-* Desinstalar: borra todo el repositorio.
-* Iniciar: lanza supervisor y ejecuta la aplicacion en segundo plano.
+* **Instalar:** se instala supervisor, necesario para mantener el proceso en segundo plano, se clona el repositorio, se copia el archivo de configuracion que usa supervisor, como este de [aqui](https://github.com/Anixo/ProyectoIV/blob/master/hugwebconfig.conf), y se instalan los requirements.  
+* **Desinstalar:** borra todo el repositorio.
+* **Iniciar:** lanza supervisor y ejecuta la aplicacion en segundo plano.
+* **Parar:** detiene supervisor.
+
+Para ejecutar la instalacion de nuestra aplicacion con fabric, utilizamos el comando:  
+~~~
+$ fab -H <usuario>@<direccion_despliegue> <accion>
+~~~
 
 Despliegue final: maquinaquetoca.westeurope.cloudapp.azure.com
