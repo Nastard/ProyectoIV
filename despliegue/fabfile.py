@@ -11,4 +11,10 @@ def Desinstalar():
 	sudo("rm -R -f /home/vagrant/ProyectoIV")
 
 def Iniciar():
-	run("cd /home/vagrant/ProyectoIV/ && sudo supervisorctl reread && sudo supervisorctl reload && sudo supervisorctl start hugweb", pty = False)
+	run("cd /home/vagrant/ProyectoIV/")
+	sudo("supervisorctl reread")
+	sudo("supervisorctl reload")
+	sudo("supervisorctl start hugweb", pty = False)
+
+def Parar():
+	sudo("supervisorctl stop hugweb", pty = False)
