@@ -5,12 +5,12 @@ import hug
 
 @hug.get('/')
 def index():
-	"""Devuelve estado"""
+	# Devuelve estado
 	return { "status": "OK" }
 
 @hug.get('/status')
 def status():
-	"""Devuelve estado"""
+	# Devuelve estado
 	return { "status": "OK" }
 
 # @hug.get('/horario')
