@@ -3,7 +3,7 @@ certifi==2024.7.4
 chardet==3.0.4
 gunicorn==23.0.0
 hug==2.3.2
-idna==3.7
+idna==3.15
 py==1.10.0
 pyTelegramBotAPI==3.2.1
 pytest==3.2.3
