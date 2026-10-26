@@ -7,7 +7,7 @@ idna==3.15
 py==1.10.0
 pyTelegramBotAPI==3.2.1
 pytest==9.0.3
-requests==2.32.4
+requests==2.33.0
 six==1.11.0
 urllib3==2.8.0
 psycopg2==2.7.3.2
