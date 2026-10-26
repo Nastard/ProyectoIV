@@ -6,7 +6,7 @@ hug==2.3.2
 idna==3.15
 py==1.10.0
 pyTelegramBotAPI==3.2.1
-pytest==3.2.3
+pytest==9.0.3
 requests==2.32.4
 six==1.11.0
 urllib3==2.7.0
