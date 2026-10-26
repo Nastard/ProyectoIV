@@ -1,13 +1,13 @@
 argparse==1.2.1
-certifi==2024.7.4
+certifi==2026.10.18
 chardet==3.0.4
 gunicorn==23.0.0
 hug==2.3.2
-idna==3.7
+idna==3.15
 py==1.10.0
 pyTelegramBotAPI==3.2.1
-pytest==3.2.3
+pytest==9.0.3
 requests==2.33.0
 six==1.11.0
-urllib3==2.6.3
+urllib3==2.8.0
 psycopg2==2.7.3.2
